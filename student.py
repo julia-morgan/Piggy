@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
         self.fwd()
         time.sleep(2)
         self.stop()
-        self.turn_by_deg(80)
+        self.turn_by_deg(90)
       
 
 
@@ -72,7 +72,12 @@ class Piggy(PiggyParent):
         
         # lower-ordered example...
         self.right(primary=50, counter=50)
-        time.sleep(2)
+        time.sleep(3)
+        self.stop()
+        self.fwd()
+        time.sleep(1)
+        self.left(primary=50, counter=50)
+        time.sleep(3)
         self.stop()
 
     def safe_to_dance(self):

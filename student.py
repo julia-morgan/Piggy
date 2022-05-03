@@ -82,11 +82,11 @@ class Piggy(PiggyParent):
         self.stop()
 
     def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
+      """ Does a 360 distance check and returns true if safe """
       self.servo(1000)
       time.sleep(0.25)
       self.servo(2000)
-      time.sleep(0.25)
+      time.sleep(0.25) 
 
     def shake(self):
         """ Another example move """

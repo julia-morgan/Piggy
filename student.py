@@ -41,7 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "m": ("Morgan", self.morgan)
+                "sq": ("Square", self.square)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -56,7 +56,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def morgan(self):
+    def square(self):
       for side in range (4): 
         self.fwd()
         time.sleep(2)
@@ -83,7 +83,10 @@ class Piggy(PiggyParent):
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
-        pass
+      self.servo(1000)
+      time.sleep(0.25)
+      self.servo(2000)
+      time.sleep(0.25)
 
     def shake(self):
         """ Another example move """

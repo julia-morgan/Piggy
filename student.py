@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
         time.sleep(2)
         self.stop()
         self.right(90)
-        time.sleep(0.5)
+        time.sleep(0.8)
         self.stop()
       
 

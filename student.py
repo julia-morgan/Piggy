@@ -58,10 +58,10 @@ class Piggy(PiggyParent):
     '''
     def morgan(self):
       for side in range (4): 
-      self.fwd()
-      time.sleep(2)
-      self.stop()
-      self.right(90)
+        self.fwd()
+        time.sleep(2)
+        self.stop()
+        self.right(90)
       
 
 

@@ -86,7 +86,7 @@ class Piggy(PiggyParent):
       time.sleep(0.25)
       self.servo(2000)
       time.sleep(0.25)
-      if self.read_distance()>= 100:
+      if self.read_distance()>= 15:
         return True
 
     def shake(self):

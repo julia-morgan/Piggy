@@ -123,8 +123,6 @@ class Piggy(PiggyParent):
       """
 
     def move_and_turn(self):
-      i=1
-      while i<10:
         while True:
           self.fwd()
           self.read_distance()

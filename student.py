@@ -42,7 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "sq": ("Square", self.square),
-                "m": ("Move to wall", self.move)
+                "m": ("Move to wall", self.move),
                 "t": ("Move and Turn", self.move_and_turn),
                 }
         # loop and print the menu...

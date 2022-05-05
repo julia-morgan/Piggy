@@ -105,7 +105,7 @@ class Piggy(PiggyParent):
          time.sleep(0.5) 
          self.distance() 
       else:
-        self.quit
+        self.stop()
 
            
         

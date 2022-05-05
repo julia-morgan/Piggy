@@ -100,12 +100,12 @@ class Piggy(PiggyParent):
         self.stop()
 
     def move(self):
-      while self.read_distance>=600:
+      while self.read_distance()>=600:
          self.fwd()
          time.sleep(0.5) 
          self.distance() 
       else:
-          quit
+        self.quit
 
            
         

@@ -110,16 +110,16 @@ class Piggy(PiggyParent):
 
         
     def move_and_turn(self):
-      while self.read_distance()>=600:
+      while self.read_distance()>=600 == True:
         self.read_distance() 
         self.fwd()
         time.sleep(0.5) 
       else:
         self.stop()
         self.right()
-        time.sleep(4)
+        time.sleep(1)
         self.stop()
-        self.fwd()
+        return True
       
 
            

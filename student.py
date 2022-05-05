@@ -104,7 +104,11 @@ class Piggy(PiggyParent):
          self.fwd()
          time.sleep(1)
          self.stop()
-         self.safe_to_dance()
+         self.scan()
+         self.scan()
+         if self.read_distance<= 100:
+           return False
+        
          
 
     def scan(self):

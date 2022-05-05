@@ -56,6 +56,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+  
     def square(self):
       for side in range (4): 
         self.fwd()
@@ -64,7 +65,6 @@ class Piggy(PiggyParent):
         self.right(90)
         time.sleep(0.8)
         self.stop()
-      
 
 
       
@@ -84,9 +84,12 @@ class Piggy(PiggyParent):
       """ Does a 360 distance check and returns true if safe """
       self.servo(1000)
       time.sleep(0.25)
+      if self.read_distance()<= 300:
       self.servo(2000)
       time.sleep(0.25)
-      if self.read_distance()>= 15:
+      if self.read_distance()<=300:
+        return False
+      else:
         return True
 
     def shake(self):

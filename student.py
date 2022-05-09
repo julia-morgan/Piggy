@@ -151,7 +151,7 @@ class Piggy(PiggyParent):
         self.read_distance()
         """
 
-    def move_and_turn():
+    def move_and_turn(self):
       while True: 
         self.servo(self.MIDPOINT)
         self.fwd()

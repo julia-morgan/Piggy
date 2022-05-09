@@ -157,9 +157,7 @@ class Piggy(PiggyParent):
         self.fwd()
         if self.read_distance()>= 500:
           self.stop()
-          self.right()
-          time.sleep(0.5) 
-          return True
+          self.turn_by_degree(180)
          
 
     def scan(self):

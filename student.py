@@ -138,7 +138,8 @@ class Piggy(PiggyParent):
             return True
         """
 
-    def move_and_turn():
+    def move_and_turn(self
+                     ):
       while self.read_distance>= 600:
         self.read_distance()
         self.fwd() 

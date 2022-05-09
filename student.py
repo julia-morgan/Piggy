@@ -152,14 +152,14 @@ class Piggy(PiggyParent):
         """
 
     def move_and_turn():
-    while True: 
-      self.servo(self.MIDPOINT)
-      self.fwd()
-      if self.read_distance()=< 500:
-        self.stop()
-        self.right()
-        time.sleep(0.5) 
-        return True
+      while True: 
+        self.servo(self.MIDPOINT)
+        self.fwd()
+        if self.read_distance()=< 500:
+          self.stop()
+          self.right()
+          time.sleep(0.5) 
+          return True
          
 
     def scan(self):

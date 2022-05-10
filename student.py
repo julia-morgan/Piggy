@@ -156,18 +156,20 @@ class Piggy(PiggyParent):
           self.turn_by_deg(180)
          
     def around_a_box(self):
-      
-      while self.read_distance()>=600:
-        self.read_distance() 
-        self.fwd()
-        time.sleep(0.5) 
-      else:
-        self.turn_by_deg(50)
-        self.fwd()
-        time.sleep(1)
-        self.stop()
-        self.servo(2000)
-        self.read_distance()
+      True=safe
+      while True:
+        while self.read_distance()>=600:
+          self.read_distance() 
+          self.fwd()
+          time.sleep(0.5) 
+        else:
+          self.turn_by_deg(50)
+          self.fwd()
+          time.sleep(1)
+          self.stop()
+          self.servo(2000)
+          self.read_distance()
+          return safe
         
         
           

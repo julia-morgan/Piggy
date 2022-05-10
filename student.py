@@ -44,6 +44,7 @@ class Piggy(PiggyParent):
                 "sq": ("Square", self.square),
                 "m": ("Move to wall", self.move),
                 "t": ("Move and Turn", self.move_and_turn),
+                "b": ("Move around a box", self.around_a_box),
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):

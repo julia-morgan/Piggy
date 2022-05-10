@@ -171,7 +171,7 @@ class Piggy(PiggyParent):
           return True
       """
 
-    def around_a_box():
+    def around_a_box(self):
       box= False
       while True:
         self.fwd()

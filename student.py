@@ -177,7 +177,7 @@ class Piggy(PiggyParent):
         self.fwd()
         self.read_distance()
         if self.read_distance()>=300:
-          box=False
+          return box
           while box:
             self.stop()
             self.turn_by_deg(40)

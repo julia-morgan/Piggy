@@ -159,7 +159,19 @@ class Piggy(PiggyParent):
           self.stop()
           self.turn_by_deg(180)
          
+    def around_a_box(self):
+      while True: 
+        self.fwd()
+        self.servo(90)
+        if self.read_distance()<= 300:
+          self.servo(self.MIDPOINT)
+          return True
+        else:
+          return True
+          
 
+
+  
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):

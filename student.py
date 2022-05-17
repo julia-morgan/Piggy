@@ -155,7 +155,7 @@ class Piggy(PiggyParent):
           self.stop()
           self.turn_by_deg(180)
        
-    """"def around_a_box(self):
+    """def around_a_box(self):
     
       while True:
         while self.read_distance()>=400:

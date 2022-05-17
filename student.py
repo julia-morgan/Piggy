@@ -197,12 +197,23 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(1)
             self.stop()
+            self.fwd()
+            time.sleep(2)
+            box_side=self.servo(2000)
+            time.sleep(0.25)
+            if box_side <50:
+              self.fwd()
+            else:
+              self.left()
+              time.stop(1)
+              self.stop()
+            
             
           if dis_left>dis_right :
             self.left()
             time.sleep(1)
             self.stop()
-            
+          
      
    
     def scan(self):

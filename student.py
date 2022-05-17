@@ -189,20 +189,20 @@ class Piggy(PiggyParent):
           self.stop()
           self.servo(1000)
           time.sleep(0.25)
-          self.read_distance()= dis_left
+          dis_left=self.read_distance()
           self.servo(2000)
           time.sleep(0.25)
-          self.read_distance()=dis_right
+          dis_right=self.read_distance()
           if dis_right > dis_left:
             self.right()
             time.sleep(3)
             self.stop()
-            return True
+            
           if dis_left>dis_right :
             self.left()
             time.sleep(3)
             self.stop()
-            return True
+            
      
    
     def scan(self):

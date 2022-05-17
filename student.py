@@ -207,7 +207,7 @@ class Piggy(PiggyParent):
               self.fwd()
             else:
               self.left()
-              time.stop(0.5)
+              time.sleep(0.5)
               self.stop()
               self.fwd()
             

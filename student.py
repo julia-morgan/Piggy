@@ -212,10 +212,10 @@ class Piggy(PiggyParent):
               self.fwd()
             
           if dis_left>dis_right :
-            self.right()
+            self.left()
             time.sleep(0.7)
             self.stop()
-            self.left()
+            self.right()
             time.sleep(1)
             self.stop()
             self.fwd()

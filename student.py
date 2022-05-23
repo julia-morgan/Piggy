@@ -174,16 +174,32 @@ class Piggy(PiggyParent):
         if self.read_distance()<=100:
           moving=False 
           self.stop()
-        self.servo(1500)
-        time.sleep(0.25)
-        if self.read_distance()<=100:
-          moving=False 
-          self.stop()
         self.servo(1760)
         time.sleep(0.25)
         if self.read_distance()<=100:
           moving=False 
           self.stop()
+        self.servo(1500)
+        time.sleep(0.25)
+        if self.read_distance()<=100:
+          moving=False 
+          self.stop()
+          if self.read_distance()<= 200:
+          self.stop()
+          self.servo(1000)
+          time.sleep(0.25)
+          dis_right=self.read_distance()
+          self.servo(2000)
+          time.sleep(0.25)
+          dis_left=self.read_distance()
+          if dis_right > dis_left:
+            self.right()
+            time.sleep(1)
+            self.stop()
+          if dis_left> dis_right:
+            self.left()
+            time.sleep(1)
+            self.stop()
 
 
     def scan(self):

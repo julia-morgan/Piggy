@@ -45,6 +45,7 @@ class Piggy(PiggyParent):
                 "m": ("Move to wall", self.move),
                 "t": ("Move and Turn", self.move_and_turn),
                 "b": ("Move around a box", self.around_a_box),
+                "ms":("Move and Scan", self.move)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -84,7 +85,7 @@ class Piggy(PiggyParent):
           self.stop()
 
     def safe_to_dance(self):
-      """ Does a 360 distance check and returns true if safe """
+ 
       self.servo(1000)
       time.sleep(0.25)
       if self.read_distance()<= 300:
@@ -101,51 +102,10 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.stop()
 
-    def move(self):
+   
      
 
-        """"
-    def move_and_turn(self):
-      while self.read_distance()>=600:
-        self.read_distance() 
-        self.fwd()
-        time.sleep(0.5) 
-      else:
-        self.stop()
-        self.right()
-        time.sleep(1)
-        self.stop()
-        self.fwd()
      
-
-    def move_and_turn(self):
-        while True:
-          self.fwd()
-          self.read_distance()
-          if self.read_distance()<= 600:
-            return False 
-          if False:
-            self.stop()
-            self.right()
-            time.sleep(2)
-            self.stop()
-            return True
-          else:
-            return True
-       
-
-    def move_and_turn(self):
-      while self.read_distance()>= 600:
-        self.read_distance()
-        self.fwd() 
-        time.sleep(0.5)
-      else: 
-        self.stop()
-        self.right()
-        time.sleep(0.8)
-        self.stop()
-        self.read_distance()
-        """
 
     def move_and_turn(self):
       while True: 
@@ -155,32 +115,7 @@ class Piggy(PiggyParent):
           self.stop()
           self.turn_by_deg(180)
        
-    """def around_a_box(self):
-    
-      while True:
-        while self.read_distance()>=400:
-          self.fwd()
-          time.sleep(0.5) 
-        else:
-          self.turn_by_deg(50)
-          self.fwd()
-          time.sleep(1)
-          self.stop()
-          self.servo(2000)
-          self.read_distance()
-          return True
-     
-
-    def around_a_box(self):
-      while True:
-        self.fwd()
-        self.read_distance()
-        self.read_distance()>=300 = box
-          if box:
-            self.stop()
-            self.turn_by_deg(40)
-            return True """
-
+   
     def around_a_box(self):
        while True: 
         self.servo(self.MIDPOINT)
@@ -228,8 +163,37 @@ class Piggy(PiggyParent):
             time.sleep(0.9)
             self.stop()
             self.fwd()
-     
-   
+
+            
+    def move(self):
+      moving = True
+      while moving:
+        self.fwd()
+        self.servo(1120)
+        self.servo(1760)
+        while self.read_distance()<=60:
+          self.stop()
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):

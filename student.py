@@ -178,7 +178,7 @@ class Piggy(PiggyParent):
         while self.read_distance()<=60:
           self.stop()
 
-    def 
+  
           
 
 

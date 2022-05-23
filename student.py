@@ -170,17 +170,17 @@ class Piggy(PiggyParent):
       while moving:
         self.fwd()
         self.servo(1120)
-        time.sleep(1)
+        time.sleep(0.25)
         if self.read_distance()<=100:
           moving=False 
           self.stop()
         self.servo(1500)
-        time.sleep(1)
+        time.sleep(0.25)
         if self.read_distance()<=100:
           moving=False 
           self.stop()
         self.servo(1760)
-        time.sleep(1)
+        time.sleep(0.25)
         if self.read_distance()<=100:
           moving=False 
           self.stop()

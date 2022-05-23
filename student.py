@@ -213,7 +213,7 @@ class Piggy(PiggyParent):
             
           if dis_left>dis_right :
             self.left()
-            time.sleep(0.7)
+            time.sleep(0.8)
             self.stop()
             self.fwd()
             time.sleep(1.3)
